@@ -86,7 +86,7 @@
       "nome": "Chloé Ambre Flamin",
       "carne": "Picanha",
       "pao": "Parmesão e Orégano",
-      "opicionais": [
+      "opcionais": [
         "Bacon",
         "Cheddar",
         "Tomate",
@@ -99,7 +99,7 @@
       "nome": "",
       "carne": "",
       "pao": "",
-      "opicionais": [],
+      "opcionais": [],
       "status": "Solicitado",
       "id": 2
     },
@@ -114,6 +114,18 @@
       ],
       "status": "Solicitado",
       "id": 3
+    },
+    {
+      "nome": "Talita",
+      "carne": "Picanha",
+      "pao": "Mel e creal",
+      "opcionais": [
+        "Cheddar",
+        "Tomate",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }

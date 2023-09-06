@@ -12,20 +12,21 @@
         </div>
 
         <div id="burger-table-rows">
-            <div class="burger-table-row">
-              <div class="order-number">1</div>  
-              <div>João</div>
-              <div>Pao de trigo</div>
-              <div>Picanha</div>
+            <div class="burger-table-row" v-for="burger in burgers" :key="burger.id">
+              <div class="order-number">{{ burger.id }}</div>  
+              <div>{{ burger.nome }}</div>
+              <div>{{ burger.pao }}</div>
+              <div>{{ burger.carne }}</div>
               <div>
                 <ul>
-                    <li>Salame</li>
-                    <li>Tomate</li>
+                    <li v-for="(opcional, index) in burger.opcionais" :key="index">{{ opcional }}</li>
+                    
                 </ul>
               </div>
               <div>
                 <Select name="status" class="status">
-                    <option value="">Selecione</option>
+                    <option value=""></option>
+                    <option v-for="s in status" :key="s.id" value="s.tipo" :selected="burger.status == s.tipo">{{ s.tipo }}</option>
                 </Select>
                 <button class="delete-btn">Cancelar</button>
               </div>
@@ -36,8 +37,42 @@
 
 <script>
     export default {
-        name: "Dashboard"
+        name: "Dashboard",
+        data() {
+            return {
+                burgers: null,
+                burgers_id: null,
+                status: []
+            }
+        },
+        methods: {
+            async getPedidos() {
+                const req = await fetch("http://localhost:3000/burgers");
+
+                const data = await req.json();
+
+                this.burgers = data;
+
+                // console.log(this.burgers);
+
+                // resgatar os estados
+
+                this.getStatus();
+        },
+        async getStatus() {
+            const req = await fetch("http://localhost:3000/status");
+
+            const data = await req.json();
+
+            this.status = data;
+        }
+    },
+    mounted() {
+        this.getPedidos();
+        this.getStatus();
     }
+
+}
 </script>
 
 <style scoped>
