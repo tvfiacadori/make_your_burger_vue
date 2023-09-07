@@ -29,11 +29,12 @@
                     <option value=""></option>
                     <option v-for="s in status" :key="s.id" :value="s.tipo" :selected="burger.status == s.tipo">{{ s.tipo }}</option>
                 </Select>
-                <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
+                <button class="delete-btn" @click="deleteBurger(burger.id)">Deletar</button>
               </div>
             </div>
         </div>
     </div>
+    
 </template>
 
 <script>

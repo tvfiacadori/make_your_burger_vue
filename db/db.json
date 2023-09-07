@@ -81,58 +81,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "nome": "Talita Fiacadori",
-      "carne": "Alcatra",
-      "pao": "Mel e creal",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": "Xexelinda",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Cebola roxa",
-        "Cheddar",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Cristina",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Cebola roxa",
-        "Cheddar",
-        "Tomate",
-        "Pepino"
-      ],
-      "status": "Em produção",
-      "id": 3
-    },
-    {
-      "nome": "Voveia",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Cebola roxa",
-        "Tomate",
-        "Cheddar"
-      ],
-      "status": "Em produção",
-      "id": 4
-    }
-  ]
+  "burgers": []
 }
